@@ -1,0 +1,58 @@
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    def append_front(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        new_node.next = self.head
+        self.head = new_node
+
+    def append_back(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        current_node = self.head
+        while current_node.next is not None:
+            current_node = current_node.next
+        current_node.next = new_node
+
+    def display(self):
+        if self.head is None:
+            print("List is empty")
+            return
+
+        current_node = self.head
+        while current_node is not None:
+            print(current_node.data, end=" -> ")
+            current_node = current_node.next
+
+    #Additional to the task function
+    def delete_element(self, value):
+        dummy = Node(0)
+        dummy.next = self.head
+        previous = dummy
+        current = self.head
+        while current is not None:
+            if value == current.data:
+                previous.next = current.next
+            else:
+                previous = current
+            current = current.next
+        self.head = dummy.next
+
+l = LinkedList()
+l.append_back(1)
+l.append_back(2)
+l.append_back(3)
+l.append_back(4)
+print(l.display())
+l.delete_element(3)
+print(l.display())
