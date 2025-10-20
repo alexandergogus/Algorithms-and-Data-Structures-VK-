@@ -1,0 +1,9 @@
+1. Проверить, является ли список циклическим - cycle_list.py
+2. Развернуть односвязный список - reverse_list.py
+3. Найти середину списка - find_the_middle_of_list.py
+4. Удалить элемент из односвязного списка - delete_element.py
+5. Является ли одна строка исходной для другой - check_subsequence.py
+6. Метод двух указателей (продолжение предыдущей задачи) - method_of_two_pointers.py
+7. Является ли слово палиндромом? - check_palindrom_stack.py
+8. Метод двух указателей (продолжение предыдущей задачи) - palindrom_method_of_two_pointers.py
+9. Слияние двух отсортированных списков - combine_sorted_linked_lists.py
